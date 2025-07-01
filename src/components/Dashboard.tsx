@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { AlertTriangle, TrendingUp, Users, FileText, Clock, Shield, Loader, Eye, DollarSign, Activity } from 'lucide-react';
 import { openaiService, GovernmentStructure, Alert, Bill } from '../services/openai';
 import { deepDiveService, DeepDiveResult } from '../services/deepDiveService';
+import { usePaywall } from '../hooks/usePaywall';
 import GovernmentSummary from './GovernmentSummary';
 import ActivityFeed from './ActivityFeed';
 import GovernmentAnalysis from './GovernmentAnalysis';
@@ -12,6 +13,8 @@ import BillTracker from './BillTracker';
 import CorruptionMap from './CorruptionMap';
 import DeepDiveResults from './DeepDiveResults';
 import DeepDivePrompts from './DeepDivePrompts';
+import PaywallModal from './PaywallModal';
+import UsageTracker from './UsageTracker';
 
 const Dashboard = () => {
   const { country } = useParams();
@@ -25,6 +28,16 @@ const Dashboard = () => {
   const [showAllActivity, setShowAllActivity] = useState(false);
   const [showAllAlerts, setShowAllAlerts] = useState(false);
   const [showAllBills, setShowAllBills] = useState(false);
+
+  const { 
+    usage, 
+    showPaywall, 
+    paywallFeature, 
+    checkFeatureAccess, 
+    incrementUsage, 
+    closePaywall, 
+    upgradePlan 
+  } = usePaywall();
 
   useEffect(() => {
     const analyzeGovernment = async () => {
@@ -220,6 +233,11 @@ const Dashboard = () => {
   const handleDeepDive = async (topic: string) => {
     if (!governmentData) return;
 
+    // Check if user has access to deep dive feature
+    if (!checkFeatureAccess('deep-dive')) {
+      return;
+    }
+
     setDeepDiveLoading(true);
     try {
       if (import.meta.env.VITE_OPENAI_API_KEY) {
@@ -235,6 +253,9 @@ const Dashboard = () => {
         const demoResult = deepDiveService.generateDemoDeepDive(governmentData.displayName, topic);
         setDeepDiveResult(demoResult);
       }
+      
+      // Increment usage after successful deep dive
+      incrementUsage('deep-dive');
       setShowDeepDive(true);
     } catch (err) {
       console.error('Deep dive error:', err);
@@ -467,6 +488,15 @@ const Dashboard = () => {
 
         {/* Right Column - Detailed Analysis */}
         <div className="space-y-8">
+          {/* Usage Tracker */}
+          <UsageTracker
+            deepDivesUsed={usage.deepDivesUsed}
+            deepDivesLimit={usage.deepDivesLimit}
+            alertsEnabled={usage.alertsEnabled}
+            planName={usage.planName}
+            onUpgrade={() => setShowPaywall(true)}
+          />
+
           <GovernmentAnalysis governmentData={governmentData} />
           
           {/* Compact Alerts */}
@@ -491,6 +521,17 @@ const Dashboard = () => {
           onViewAll={() => setShowAllBills(!showAllBills)}
         />
       </div>
+
+      {/* Paywall Modal */}
+      <PaywallModal
+        isOpen={showPaywall}
+        onClose={closePaywall}
+        feature={paywallFeature}
+        currentUsage={{
+          deepDives: usage.deepDivesUsed,
+          limit: usage.deepDivesLimit
+        }}
+      />
 
       {/* Loading overlay for deep dive */}
       {deepDiveLoading && (
