@@ -10,7 +10,7 @@ export class GeographicAnalysisService {
   async analyzeCountry(countryName: string): Promise<CountryData> {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -54,7 +54,7 @@ Focus on current political climate, corruption patterns, and democratic health.`
   async analyzeState(countryName: string, stateName: string): Promise<StateData> {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -107,7 +107,7 @@ Focus on state-specific political issues, local corruption patterns, and regiona
   async analyzeCity(countryName: string, stateName: string, cityName: string): Promise<CityData> {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -210,7 +210,7 @@ Provide specific, realistic details about local governance and political dynamic
   async getStatesForCountry(countryName: string): Promise<StateData[]> {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -259,7 +259,7 @@ Include 5-15 major states/provinces depending on country size.`
   async getCitiesForState(countryName: string, stateName: string): Promise<CityData[]> {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
