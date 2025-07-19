@@ -80,7 +80,7 @@ const ParticlesBackground: React.FC = () => {
               default: "out",
             },
             random: false,
-            speed: 6.413648243462092,
+            speed: 2.5,
             straight: false,
           },
           number: {

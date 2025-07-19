@@ -197,13 +197,13 @@ const LocationSearch: React.FC<LocationSearchProps> = ({ onLocationSelect }) => 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="mt-6 p-4 bg-blue-900/20 border border-blue-600/20 rounded-lg"
+        className="mt-6 p-4 bg-black/40 backdrop-blur-sm border border-orange-400/30 rounded-lg"
       >
         <div className="flex items-start space-x-3">
-          <AlertCircle className="h-5 w-5 text-blue-400 mt-0.5" />
+          <AlertCircle className="h-5 w-5 text-orange-400 mt-0.5" />
           <div>
-            <h4 className="font-semibold text-blue-400 mb-1">Multi-Level Government Analysis</h4>
-            <p className="text-slate-300 text-sm">
+            <h4 className="font-semibold text-orange-400 mb-1">Multi-Level Government Analysis</h4>
+            <p className="text-white text-sm">
               Democracy Watch now monitors governments at every level - from federal legislation 
               to city council meetings. Search for any country, state, or city to get started.
               {!import.meta.env.VITE_OPENAI_API_KEY && ' Add your OpenAI API key for enhanced search capabilities.'}
