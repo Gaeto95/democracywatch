@@ -251,9 +251,26 @@ Provide SPECIFIC, DETAILED, and REALISTIC analysis with actual political intelli
       }
 
       try {
-        return JSON.parse(content);
+        // Clean the response to extract pure JSON
+        let cleanedContent = content.trim();
+        
+        // Remove markdown code block fences if present
+        cleanedContent = cleanedContent.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+        cleanedContent = cleanedContent.replace(/^```\s*/, '').replace(/\s*```$/, '');
+        
+        // Find the first { and last } to extract the JSON object
+        const firstBrace = cleanedContent.indexOf('{');
+        const lastBrace = cleanedContent.lastIndexOf('}');
+        
+        if (firstBrace === -1 || lastBrace === -1 || firstBrace >= lastBrace) {
+          throw new Error('No valid JSON object found in response');
+        }
+        
+        const jsonString = cleanedContent.substring(firstBrace, lastBrace + 1);
+        return JSON.parse(jsonString);
       } catch (parseError) {
         console.error('Failed to parse government analysis:', parseError);
+        console.error('Raw content:', content);
         throw new Error('Failed to parse analysis results');
       }
     } catch (error) {
