@@ -67,138 +67,185 @@ const Dashboard = () => {
               legislature_leader: 'Speaker of the House (Demo Mode)'
             },
             recentActivity: [
-              'Infrastructure Modernization Act - Under Committee Review',
-              'Digital Privacy Protection Bill - Floor Vote Scheduled',
-              'Environmental Protection Amendment - Passed House'
+              'H.R. 2024-7832: Artificial Intelligence Safety and Innovation Act - Committee markup scheduled',
+              'S. 2024-4156: Climate Resilience Infrastructure Investment Act ($847B) - Senate floor debate',
+              'H.R. 2024-9234: Secure Border and Immigration Reform Act - Passed House 247-182',
+              'S. 2024-3421: Medicare Drug Price Negotiation Expansion Act - Committee review',
+              'H.R. 2024-6789: Small Business AI Tax Credit Act - Markup completed'
             ],
             corruptionRisk: 67,
-            politicalContext: 'Current administration pushing major infrastructure spending while facing scrutiny over contractor selection processes. Opposition raising concerns about transparency in recent legislative procedures.',
-            upcomingElections: 'Next general election scheduled for November 2025',
-            keyIssues: ['Economic Recovery', 'Climate Policy', 'Digital Rights', 'Healthcare Reform', 'Infrastructure', 'Corporate Accountability'],
+            politicalContext: 'Current administration pushing major AI regulation and climate infrastructure spending while facing intense scrutiny over defense contractor relationships. Bipartisan concerns emerging over midnight amendments to spending bills. Recent lobbying disclosure gaps raising transparency questions.',
+            upcomingElections: 'Presidential election November 2024, Congressional midterms November 2026',
+            keyIssues: ['AI Regulation', 'Climate Infrastructure', 'Immigration Reform', 'Healthcare Costs', 'Defense Spending', 'Corporate Tax Policy'],
             activeBills: [
               {
-                id: 'HR-2024-4829',
-                title: 'Infrastructure Modernization Act',
+                id: 'HR-2024-7832',
+                title: 'Artificial Intelligence Safety and Innovation Act',
                 status: 'suspicious',
-                stage: 'Committee Review',
-                riskScore: 87,
-                issues: ['Midnight introduction', 'Unusual contractor provisions', 'Limited review time'],
-                description: 'Federal infrastructure spending bill with concerning procurement language',
-                dateIntroduced: '2024-01-15',
-                sponsor: 'Rep. Johnson (Demo)',
-                summary: 'Allocates $50B for infrastructure with questionable contractor selection criteria',
-                redFlags: ['Introduced at 11:47 PM', 'Favors specific contractors', 'Bypasses normal bidding'],
-                publicSupport: 34,
-                lobbyingSpending: 2400000
+                stage: 'Committee Markup',
+                riskScore: 89,
+                issues: ['Tech industry exemptions', 'Rushed timeline', 'Limited public input'],
+                description: 'Comprehensive AI regulation framework with concerning industry carve-outs',
+                dateIntroduced: '2024-02-14',
+                sponsor: 'Rep. Sarah Chen (D-CA)',
+                summary: 'Establishes AI safety standards but includes broad exemptions for major tech companies',
+                redFlags: ['Major tech companies wrote key provisions', 'Exempts existing AI systems', 'Weak enforcement mechanisms'],
+                publicSupport: 28,
+                lobbyingSpending: 8700000
               },
               {
-                id: 'S-2024-2341',
-                title: 'Clean Energy Investment Bill',
+                id: 'S-2024-4156',
+                title: 'Climate Resilience Infrastructure Investment Act',
                 status: 'monitoring',
                 stage: 'Senate Floor',
-                riskScore: 34,
-                issues: ['Corporate tax breaks'],
-                description: 'Renewable energy investment with some questionable incentive structures',
-                dateIntroduced: '2024-02-03',
-                sponsor: 'Sen. Williams (Demo)',
-                summary: 'Provides tax incentives for renewable energy with some corporate benefits',
-                redFlags: ['Unusual tax break provisions'],
+                riskScore: 42,
+                issues: ['Regional favoritism', 'Contractor pre-selection'],
+                description: '$847B climate infrastructure package with geographic allocation concerns',
+                dateIntroduced: '2024-01-28',
+                sponsor: 'Sen. Michael Torres (D-NM)',
+                summary: 'Massive climate infrastructure investment with questionable regional distribution formulas',
+                redFlags: ['Favors specific states', 'Pre-approved contractor lists'],
                 publicSupport: 67,
+                lobbyingSpending: 12400000
+              },
+              {
+                id: 'HR-2024-9234',
+                title: 'Secure Border and Immigration Reform Act',
+                status: 'monitoring',
+                stage: 'Senate Committee',
+                riskScore: 56,
+                issues: ['Enforcement contractor benefits', 'Technology vendor favoritism'],
+                description: 'Border security enhancement with concerning contractor provisions',
+                dateIntroduced: '2024-03-05',
+                sponsor: 'Rep. James Rodriguez (R-TX)',
+                summary: '$23B border security package with pre-selected technology vendors',
+                redFlags: ['No-bid contracts for surveillance tech', 'Vendor lobbying connections'],
+                publicSupport: 51,
+                lobbyingSpending: 5600000
+              },
+              {
+                id: 'S-2024-3421',
+                title: 'Medicare Drug Price Negotiation Expansion Act',
+                status: 'clear',
+                stage: 'Committee Review',
+                riskScore: 18,
+                issues: [],
+                description: 'Medicare drug price negotiation expansion with transparent provisions',
+                dateIntroduced: '2024-02-22',
+                sponsor: 'Sen. Elizabeth Warren (D-MA)',
+                summary: 'Expands Medicare drug price negotiation to 50 additional medications',
+                redFlags: [],
+                publicSupport: 84,
                 lobbyingSpending: 890000
               },
               {
-                id: 'HR-2024-5672',
-                title: 'Small Business Relief Act',
+                id: 'HR-2024-6789',
+                title: 'Small Business AI Tax Credit Act',
                 status: 'clear',
-                stage: 'House Vote',
-                riskScore: 12,
-                issues: [],
-                description: 'Standard small business support legislation with transparent provisions',
-                dateIntroduced: '2024-01-28',
-                sponsor: 'Rep. Martinez (Demo)',
-                summary: 'Provides tax relief and grants for small businesses affected by economic downturn',
-                redFlags: [],
-                publicSupport: 78,
-                lobbyingSpending: 150000
+                stage: 'House Floor',
+                riskScore: 22,
+                issues: ['Definition ambiguity'],
+                description: 'Tax credits for small businesses adopting AI technologies',
+                dateIntroduced: '2024-03-12',
+                sponsor: 'Rep. Lisa Park (R-OH)',
+                summary: 'Provides 25% tax credit for small businesses implementing AI solutions under $100K',
+                redFlags: ['Broad AI definition could be exploited'],
+                publicSupport: 72,
+                lobbyingSpending: 340000
+              },
+              {
+                id: 'S-2024-5678',
+                title: 'Defense Contractor Transparency Act',
+                status: 'suspicious',
+                stage: 'Committee Review',
+                riskScore: 78,
+                issues: ['Industry-written exemptions', 'Weak disclosure requirements'],
+                description: 'Defense contractor oversight with concerning loopholes',
+                dateIntroduced: '2024-02-08',
+                sponsor: 'Sen. Robert Hayes (R-SC)',
+                summary: 'Requires defense contractor transparency but includes major exemptions',
+                redFlags: ['Defense industry wrote key sections', 'Exempts classified contracts', 'No penalty enforcement'],
+                publicSupport: 39,
+                lobbyingSpending: 15200000
               }
             ],
             alerts: [
               {
                 id: 1,
                 type: 'critical',
-                title: 'Midnight Infrastructure Bill',
-                description: 'H.R. 4829 introduced at 11:47 PM with unusual contractor provisions',
-                time: '2 hours ago',
-                confidence: 89,
+                title: 'AI Bill Industry Influence Alert',
+                description: 'H.R. 7832 AI Safety Act contains provisions written directly by tech industry lobbyists',
+                time: '4 hours ago',
+                confidence: 94,
                 source: 'Legislative tracking',
                 actionRequired: true,
-                relatedBills: ['HR-2024-4829']
+                relatedBills: ['HR-2024-7832']
               },
               {
                 id: 2,
                 type: 'warning',
-                title: 'Voting Pattern Anomaly',
-                description: 'Senator Johnson reversed position on 3 bills after private meetings',
-                time: '6 hours ago',
-                confidence: 76,
+                title: 'Defense Spending Irregularity',
+                description: 'S. 5678 Defense Transparency Act weakened after $15M lobbying surge',
+                time: '8 hours ago',
+                confidence: 87,
                 source: 'Pattern detection',
-                actionRequired: false,
-                relatedBills: []
+                actionRequired: true,
+                relatedBills: ['S-2024-5678']
               },
               {
                 id: 3,
                 type: 'info',
-                title: 'Lobbying Spike Detected',
-                description: 'Defense contractors increased spending 340% this quarter',
+                title: 'Climate Bill Regional Bias',
+                description: 'S. 4156 Climate Infrastructure disproportionately benefits sponsor\'s home state',
                 time: '1 day ago',
-                confidence: 82,
-                source: 'Financial analysis',
+                confidence: 79,
+                source: 'Geographic analysis',
                 actionRequired: false,
-                relatedBills: []
+                relatedBills: ['S-2024-4156']
               }
             ],
             corruptionPatterns: [
               {
-                type: 'Midnight Legislation',
-                description: 'Bills introduced outside normal hours to avoid scrutiny',
+                type: 'Industry-Written Legislation',
+                description: 'Bills containing provisions written directly by industry lobbyists',
                 severity: 'high',
-                instances: 5,
+                instances: 8,
                 trend: 'increasing',
-                examples: ['HR-4829 at 11:47 PM', 'S-2156 at 12:23 AM']
+                examples: ['AI Safety Act tech exemptions', 'Defense transparency loopholes']
               },
               {
-                type: 'Corporate Revolving Door',
-                description: 'Officials moving between government and private sector',
+                type: 'Lobbying Surge Correlation',
+                description: 'Bill modifications following major lobbying expenditure spikes',
                 severity: 'medium',
-                instances: 12,
-                trend: 'stable',
-                examples: ['Former EPA chief to oil company', 'Defense contractor to Pentagon']
+                instances: 15,
+                trend: 'increasing',
+                examples: ['Defense bill weakened after $15M surge', 'Climate bill regional changes after state lobbying']
               }
             ],
             regionalData: [
               {
                 name: 'Federal',
                 risk: 67,
-                alerts: 3,
+                alerts: 5,
                 trend: 'up',
                 population: '330M',
-                keyIssues: ['Infrastructure', 'Healthcare']
+                keyIssues: ['AI Regulation', 'Defense Spending']
               },
               {
                 name: 'California',
-                risk: 45,
-                alerts: 1,
+                risk: 52,
+                alerts: 2,
                 trend: 'stable',
                 population: '39M',
-                keyIssues: ['Housing', 'Climate']
+                keyIssues: ['Tech Regulation', 'Climate Policy']
               },
               {
                 name: 'Texas',
-                risk: 52,
-                alerts: 2,
+                risk: 58,
+                alerts: 3,
                 trend: 'up',
                 population: '30M',
-                keyIssues: ['Energy', 'Immigration']
+                keyIssues: ['Border Security', 'Energy Infrastructure']
               }
             ]
           });

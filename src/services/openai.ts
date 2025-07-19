@@ -157,11 +157,6 @@ THINK STEP BY STEP and provide detailed, realistic analysis:
 5. Assess regional variations and local government issues
 6. Provide specific, actionable intelligence
 
-Return a JSON object with this EXACT structure:
-{
-  "country": "Country Name",
-  "displayName": "Full Display Name",
-  "governmentType": "Specific government type",
   "legislativeBodies": ["Body 1", "Body 2"],
   "currentLeaders": {
     "head_of_state": "Specific name and title",
