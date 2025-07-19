@@ -261,6 +261,36 @@ The vision is to create the world's first **comprehensive, AI-powered, globally-
 
 ## 🚀 Join the Transparency Revolution
 
+### **Setup Instructions**
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd watchdog
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Then edit `.env` and add your OpenAI API key:
+   ```
+   VITE_OPENAI_API_KEY=your_actual_api_key_here
+   ```
+   Get your API key from: [OpenAI Platform](https://platform.openai.com/api-keys)
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+**Note:** The app works in demo mode without an API key, but adding one enables real-time AI analysis.
+
 ### **Current Capabilities**
 - **Explore the prototype** to see what AI-powered government analysis could look like
 - **Test the interface** and provide feedback on the user experience
