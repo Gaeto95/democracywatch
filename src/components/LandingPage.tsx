@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Search, Shield, Eye, AlertTriangle, Users, Zap, Globe, TrendingUp, Brain, Target, Crosshair } from 'lucide-react';
 import LocationSearch from './LocationSearch';
