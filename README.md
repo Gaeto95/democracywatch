@@ -479,4 +479,8 @@ Multiple AI agents, working 24/7, trained specifically to expose what government
 
 **"This prototype shows how AI could watch the watchers - and democracy might win."** 🤖⚡
 
+---
+
+*"I stared into the abyss, and it actually stared back"* 👁️
+
 ![Built with AI](https://img.shields.io/badge/Built%20with-AI%20Prototype-red) ![For Democracy](https://img.shields.io/badge/For-Democracy-blue) ![Demo](https://img.shields.io/badge/Working-Prototype-purple) ![Potential](https://img.shields.io/badge/Potential-Global-green)

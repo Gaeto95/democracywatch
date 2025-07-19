@@ -36,15 +36,6 @@ const Header = () => {
               <AlertTriangle className="h-4 w-4" />
               <span>Government Analysis</span>
             </Link>
-            <a 
-              href="https://github.com/democracy-watch/api" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium transition-colors flex items-center space-x-2 text-slate-300 hover:text-white"
-            >
-              <Search className="h-4 w-4" />
-              <span>API Docs</span>
-            </a>
           </nav>
           
           <div className="flex items-center space-x-4">
