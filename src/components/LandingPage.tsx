@@ -277,11 +277,70 @@ const LandingPage = () => {
       {/* Stats Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Current Capabilities
+            </h2>
+            <p className="text-xl text-slate-300">
+              What Democracy Watch can analyze today
+            </p>
+          </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <StatsCounter end={195} label="Countries Monitored" />
-            <StatsCounter end={2847} label="States & Provinces" />
-            <StatsCounter end={15234} label="Cities Tracked" />
-            <StatsCounter end={2.1} label="Million Citizens Protected" suffix="M" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                Any
+              </div>
+              <div className="text-slate-300 text-sm font-medium">Country Analysis</div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-center group"
+            >
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                Multi-Level
+              </div>
+              <div className="text-slate-300 text-sm font-medium">Government Coverage</div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-center group"
+            >
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                Deep
+              </div>
+              <div className="text-slate-300 text-sm font-medium">AI Investigation</div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="text-center group"
+            >
+              <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                Open
+              </div>
+              <div className="text-slate-300 text-sm font-medium">Source Platform</div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -296,10 +355,10 @@ const LandingPage = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Global Corruption Hotspots
+              Example Analysis Targets
             </h2>
             <p className="text-xl text-slate-300">
-              Real-time monitoring of democratic backsliding worldwide
+              Countries where transparency analysis could be valuable
             </p>
           </motion.div>
 
@@ -375,7 +434,7 @@ const LandingPage = () => {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Real Results, Real Impact
+              The Vision: Real Results, Real Impact
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -387,10 +446,10 @@ const LandingPage = () => {
                 className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700"
               >
                 <div className="text-3xl mb-4">🇺🇸</div>
-                <h3 className="text-xl font-bold text-white mb-3">United States</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Multi-Agent Vision</h3>
                 <p className="text-slate-300">
-                  Exposed midnight infrastructure bill with suspicious contractor provisions. 
-                  Citizens mobilized, bill was amended.
+                  Multiple AI agents could work together to detect corruption patterns 
+                  that single systems might miss.
                 </p>
               </motion.div>
 
@@ -402,10 +461,10 @@ const LandingPage = () => {
                 className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700"
               >
                 <div className="text-3xl mb-4">🇧🇷</div>
-                <h3 className="text-xl font-bold text-white mb-3">Brazil</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Global Network</h3>
                 <p className="text-slate-300">
-                  Identified environmental deregulation pattern across 5 states. 
-                  Connected to same lobbying firm.
+                  A decentralized network could monitor governments worldwide, 
+                  resistant to interference or shutdown.
                 </p>
               </motion.div>
 
@@ -417,10 +476,10 @@ const LandingPage = () => {
                 className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700"
               >
                 <div className="text-3xl mb-4">🏛️</div>
-                <h3 className="text-xl font-bold text-white mb-3">Municipal Level</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Behavioral Change</h3>
                 <p className="text-slate-300">
-                  Now tracking city councils worldwide. Exposed zoning corruption 
-                  in 12 major cities this quarter.
+                  When governments know they're being watched by incorruptible AI, 
+                  they might start thinking differently.
                 </p>
               </motion.div>
             </div>
@@ -437,11 +496,11 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Democratize
-              <span className="block text-blue-400">Democracy Itself?</span>
+              Ready to Explore
+              <span className="block text-blue-400">AI-Powered Transparency?</span>
             </h2>
             <p className="text-xl text-slate-300 mb-12">
-              Join millions of citizens worldwide who refuse to let their governments hide in darkness.
+              Explore how AI could help citizens understand and monitor their governments.
             </p>
             
             <motion.button
@@ -451,7 +510,7 @@ const LandingPage = () => {
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center space-x-3 mx-auto"
             >
               <Zap className="h-5 w-5" />
-              <span>Start Investigating Now</span>
+              <span>Try AI Analysis Now</span>
             </motion.button>
           </motion.div>
         </div>
