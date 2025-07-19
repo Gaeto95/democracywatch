@@ -38,10 +38,10 @@ const ParticlesBackground: React.FC = () => {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 15,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4,
             },
             grab: {
@@ -104,7 +104,7 @@ const ParticlesBackground: React.FC = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 4.008530152163807 },
+            value: { min: 0.5, max: 1.5 },
             random: true,
             animation: {
               enable: false,
