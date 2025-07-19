@@ -242,7 +242,7 @@ Provide SPECIFIC, DETAILED, and REALISTIC analysis with actual political intelli
           }
         ],
         temperature: 0.4,
-        max_tokens: 4000
+        max_tokens: 4096
       });
 
       const content = response.choices[0]?.message?.content;
