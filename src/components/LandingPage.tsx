@@ -192,9 +192,9 @@ const LandingPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className="text-white mt-6 text-sm bg-black/20 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10"
+              className="text-white mt-6 text-sm bg-black/40 backdrop-blur-sm rounded-lg px-4 py-2 border border-orange-400/30"
             >
-              <span className="text-yellow-300">⚡ Live AI agents</span> analyzing your government right now
+              <span className="text-orange-400">⚡ Live AI agents</span> analyzing your government right now
             </motion.p>
           </motion.div>
         </div>
