@@ -72,7 +72,7 @@ const SourceLinks: React.FC<SourceLinksProps> = ({ sources, topic, location, onS
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => onSourceClick?.(source)}
-                className="block p-4 bg-slate-700/40 rounded-lg hover:bg-slate-700/60 transition-all duration-200 border border-slate-600 hover:border-blue-500"
+                className="block p-4 bg-slate-700/40 rounded-lg hover:bg-slate-700/60 transition-all duration-200 border border-slate-600 hover:border-blue-500 group"
               >
                 <div className="flex items-start space-x-4">
                   <div className="p-2 bg-blue-600/20 rounded-lg">
@@ -84,7 +84,10 @@ const SourceLinks: React.FC<SourceLinksProps> = ({ sources, topic, location, onS
                       <h4 className="font-semibold text-white group-hover:text-blue-400 transition-colors line-clamp-2">
                         {source.title}
                       </h4>
-                      <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-blue-400 transition-colors ml-2 flex-shrink-0" />
+                      <div className="flex items-center space-x-1 ml-2 flex-shrink-0">
+                        <span className="text-xs text-green-400 font-medium">LIVE</span>
+                        <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-blue-400 transition-colors" />
+                      </div>
                     </div>
                     
                     <p className="text-slate-300 text-sm mb-3 line-clamp-2">
@@ -130,10 +133,10 @@ const SourceLinks: React.FC<SourceLinksProps> = ({ sources, topic, location, onS
         <div className="flex items-start space-x-3">
           <AlertTriangle className="h-5 w-5 text-blue-400 mt-0.5" />
           <div>
-            <h4 className="font-semibold text-blue-400 mb-1">Deep Dive Available</h4>
+            <h4 className="font-semibold text-blue-400 mb-1">Real-Time Source Tracking</h4>
             <p className="text-slate-300 text-sm">
-              Click any source to read the full article. Our AI will analyze new sources 
-              and provide additional context as you explore deeper into {location}'s political landscape.
+              These sources are continuously monitored and updated. Click any link to access the full content. 
+              Our AI tracks new developments and will surface additional sources as the story evolves in {location}.
             </p>
           </div>
         </div>

@@ -280,7 +280,7 @@ const LandingPage = () => {
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center space-x-3 mx-auto"
             >
               <Zap className="h-5 w-5" />
-              <span>Start Exposing Now</span>
+              <span>Start Investigating Now</span>
             </motion.button>
           </motion.div>
         </div>
