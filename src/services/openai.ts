@@ -88,7 +88,7 @@ export class OpenAIService {
 
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -143,7 +143,7 @@ Always include the flag emoji. Confidence should be 0-1 based on relevance to qu
   async analyzeGovernment(location: string): Promise<GovernmentStructure> {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -295,7 +295,7 @@ Provide SPECIFIC, DETAILED, and REALISTIC analysis with actual political intelli
   }> {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
