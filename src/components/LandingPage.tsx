@@ -73,7 +73,24 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden z-10" onMouseMove={handleMouseMove}>
+      <section className="relative overflow-hidden z-10 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900" onMouseMove={handleMouseMove}>
+        {/* Animated Background Overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
+          <div 
+            className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10"
+            style={{
+              animation: 'gradientShift 8s ease-in-out infinite alternate'
+            }}
+          ></div>
+          <div 
+            className="absolute inset-0 bg-gradient-to-tl from-purple-600/15 via-pink-600/15 to-red-600/15"
+            style={{
+              animation: 'gradientShift 12s ease-in-out infinite alternate-reverse'
+            }}
+          ></div>
+        </div>
+        
         {/* Particles.js Background */}
         <ParticlesBackground />
         
