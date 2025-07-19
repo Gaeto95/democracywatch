@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Shield, AlertTriangle, DollarSign } from 'lucide-react';
+import { Shield, AlertTriangle, Search } from 'lucide-react';
 
 const Header = () => {
   const location = useLocation();
@@ -36,17 +36,15 @@ const Header = () => {
               <AlertTriangle className="h-4 w-4" />
               <span>Government Analysis</span>
             </Link>
-            <Link 
-              to="/pricing" 
-              className={`text-sm font-medium transition-colors flex items-center space-x-2 ${
-                location.pathname === '/pricing' 
-                  ? 'text-blue-400' 
-                  : 'text-slate-300 hover:text-white'
-              }`}
+            <a 
+              href="https://github.com/democracy-watch/api" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium transition-colors flex items-center space-x-2 text-slate-300 hover:text-white"
             >
-              <DollarSign className="h-4 w-4" />
-              <span>Pricing</span>
-            </Link>
+              <Search className="h-4 w-4" />
+              <span>API Docs</span>
+            </a>
           </nav>
           
           <div className="flex items-center space-x-4">
