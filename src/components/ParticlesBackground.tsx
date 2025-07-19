@@ -38,11 +38,11 @@ const ParticlesBackground: React.FC = () => {
           },
           modes: {
             push: {
-              quantity: 15,
+              quantity: 8,
             },
             repulse: {
-              distance: 100,
-              duration: 0.4,
+              distance: 80,
+              duration: 1.2,
             },
             grab: {
               distance: 255.80432187492372,
