@@ -39,7 +39,6 @@ const ParticlesBackground: React.FC = () => {
           modes: {
             push: {
               quantity: 8,
-              duration: 3.0,
             },
             repulse: {
               distance: 80,
@@ -54,7 +53,7 @@ const ParticlesBackground: React.FC = () => {
             bubble: {
               distance: 267.9854800594439,
               size: 40,
-              duration: 3.0,
+              duration: 3,
               opacity: 0.6740240862101164,
               speed: 3
             }
@@ -63,6 +62,13 @@ const ParticlesBackground: React.FC = () => {
         particles: {
           color: {
             value: "#fcfcfc",
+          },
+          life: {
+            duration: {
+              sync: false,
+              value: 3
+            },
+            count: 1
           },
           links: {
             color: "#ffffff",
