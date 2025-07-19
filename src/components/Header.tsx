@@ -19,7 +19,7 @@ const Header = () => {
               <Shield className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white">Democracy Watch</h1>
+              <h1 className="text-xl font-bold text-white">Watchdog</h1>
               <p className="text-xs text-slate-400">Global Legislative Transparency</p>
             </div>
           </Link>

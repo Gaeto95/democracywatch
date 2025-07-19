@@ -1,12 +1,12 @@
-# Democracy Watch 🛡️
+# Watchdog 🛡️
 
 **AI-Powered Government Transparency Platform (Prototype)**
 
 What if AI could analyze government patterns and detect corruption? What if we could build multiple AI agents, trained specifically for transparency and accountability, working 24/7 to expose what governments try to hide?
 
-Democracy Watch is a **working prototype** exploring that possibility. Currently a sophisticated AI-powered demonstration tool that shows what comprehensive government analysis could look like, with the vision of becoming a decentralized network of AI agents that governments can't control, silence, or corrupt.
+Watchdog is a **working prototype** exploring that possibility. Currently a sophisticated AI-powered demonstration tool that shows what comprehensive government analysis could look like, with the vision of becoming a decentralized network of AI agents that governments can't control, silence, or corrupt.
 
-![Democracy Watch](https://img.shields.io/badge/Status-Working_Prototype-yellow) ![AI Vision](https://img.shields.io/badge/Vision-Multi--Agent-red) ![Demo](https://img.shields.io/badge/Data-AI_Generated-blue) ![Potential](https://img.shields.io/badge/Potential-Global-orange)
+![Watchdog](https://img.shields.io/badge/Status-Working_Prototype-yellow) ![AI Vision](https://img.shields.io/badge/Vision-Multi--Agent-red) ![Demo](https://img.shields.io/badge/Data-AI_Generated-blue) ![Potential](https://img.shields.io/badge/Potential-Global-orange)
 
 ## 🌟 Live Demo
 
@@ -16,7 +16,7 @@ Democracy Watch is a **working prototype** exploring that possibility. Currently
 
 **The public wouldn't trust large company AIs to monitor governments - but what about multiple independent agents trained specifically for this purpose?**
 
-Democracy Watch explores this paradigm shift: **decentralized AI surveillance of power**. The vision is multiple specialized agents, each trained for different aspects of government analysis, working together to create an unstoppable transparency network.
+Watchdog explores this paradigm shift: **decentralized AI surveillance of power**. The vision is multiple specialized agents, each trained for different aspects of government analysis, working together to create an unstoppable transparency network.
 
 When governments know they're being watched by AI agents they can't control, influence, or shut down, they would start thinking differently. They would start acting differently. **This is how we could force systemic change.**
 
@@ -453,6 +453,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Democracy could be strengthened by permanent accountability
 
 **This could be the future. This is the Democracy Watch vision.**
+**This could be the future. This is the Watchdog vision.**
 
 Multiple AI agents, working 24/7, trained specifically to expose what governments try to hide. A decentralized network that no single entity could control, influence, or shut down.
 

@@ -230,7 +230,7 @@ const LandingPage = () => {
               Current Capabilities
             </h2>
             <p className="text-xl text-blue-100">
-              What Democracy Watch can analyze today
+              What Watchdog can analyze today
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">

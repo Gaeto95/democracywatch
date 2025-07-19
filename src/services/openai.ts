@@ -147,12 +147,6 @@ Always include the flag emoji. Confidence should be 0-1 based on relevance to qu
         messages: [
           {
             role: "system",
-            content: `You are an expert government analyst and corruption investigator. Conduct a COMPREHENSIVE analysis of the specified government, including deep research into current legislation, political patterns, and corruption risks.
-
-THINK STEP BY STEP and provide detailed, realistic analysis:
-
-1. Research the current government structure thoroughly
-2. Identify specific recent bills and legislation (with real-sounding names and details)
 3. Analyze corruption patterns and political controversies
 4. Generate realistic alerts based on actual political dynamics
 5. Assess regional variations and local government issues
