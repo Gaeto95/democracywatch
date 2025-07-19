@@ -147,6 +147,11 @@ Always include the flag emoji. Confidence should be 0-1 based on relevance to qu
         messages: [
           {
             role: "system",
+            content: `You are an expert government analyst specializing in democratic oversight and corruption detection. Conduct DEEP analysis of government structures, recent legislation, and political dynamics.
+
+ANALYSIS REQUIREMENTS:
+1. Research current government officials and structure
+2. Identify specific recent bills and legislative activity
 3. Analyze corruption patterns and political controversies
 4. Generate realistic alerts based on actual political dynamics
 5. Assess regional variations and local government issues
@@ -219,7 +224,6 @@ Return ONLY a valid JSON object with this exact structure:
     }
   ]
 }
-}
 
 Make everything SPECIFIC and REALISTIC. Use actual political dynamics, real-sounding bill names, and genuine corruption patterns. Corruption risk should be 0-100 (higher = more risk).`
           },
@@ -258,7 +262,7 @@ Provide SPECIFIC, DETAILED, and REALISTIC analysis with actual political intelli
         
         // Remove markdown code block fences if present
         cleanedContent = cleanedContent.replace(/^```json\s*/, '').replace(/\s*```$/, '');
-        cleanedContent = cleanedContent.replace(/^```\s*/, '').replace(/\s*```$/, '');
+        cleanedContent = cleanedContent.replace(/^``\`\s*/, '').replace(/\s*```$/, '');
         
         // Find the first { and last } to extract the JSON object
         const firstBrace = cleanedContent.indexOf('{');
@@ -293,7 +297,7 @@ Provide SPECIFIC, DETAILED, and REALISTIC analysis with actual political intelli
         messages: [
           {
             role: "system",
-            content: `You are a legislative analysis expert specializing in corruption detection. Analyze bills for potential corruption, conflicts of interest, and democratic concerns.
+            content: \`You are a legislative analysis expert specializing in corruption detection. Analyze bills for potential corruption, conflicts of interest, and democratic concerns.
 
 Return JSON with this structure:
 {
@@ -308,7 +312,7 @@ Focus on: unusual timing, beneficiaries, procedural irregularities, language pat
           },
           {
             role: "user",
-            content: `Analyze this ${country} legislation for corruption risks and democratic concerns:
+            content: \`Analyze this ${country} legislation for corruption risks and democratic concerns:
 
 ${billText}`
           }
