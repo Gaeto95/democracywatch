@@ -225,7 +225,7 @@ const LandingPage = () => {
               <span className="text-purple-400 font-semibold"> 195 countries</span>. 
               <br />
               <span className="text-green-400 font-semibold">Decentralized intelligence</span> that governments can't control or silence.
-            </p>
+            </motion.p>
             
             {/* AI Agents Visualization */}
             <motion.div
