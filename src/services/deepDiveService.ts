@@ -120,6 +120,7 @@ GENERATE REALISTIC SOURCES including:
 Make every URL look completely real and accessible. Citizens should feel they can click and follow up on these sources.`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.4,
         max_tokens: 4000
       });
@@ -177,6 +178,7 @@ Include a mix of:
 - Public records`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.3,
         max_tokens: 2000
       });

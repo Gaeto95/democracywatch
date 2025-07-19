@@ -36,6 +36,7 @@ Focus on current political climate, corruption patterns, and democratic health.`
             content: `Analyze country: ${countryName}`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.3,
         max_tokens: 1000
       });
@@ -88,6 +89,7 @@ Focus on state-specific political issues, local corruption patterns, and regiona
 6. Interstate political relationships and influences`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.3,
         max_tokens: 1200
       });
@@ -190,6 +192,7 @@ Focus on municipal governance, local corruption patterns, development projects, 
 Provide specific, realistic details about local governance and political dynamics.`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.4,
         max_tokens: 3000
       });
@@ -238,6 +241,7 @@ Include 5-15 major states/provinces depending on country size.`
             content: `List major states/provinces/regions for: ${countryName}`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.3,
         max_tokens: 2000
       });
@@ -287,6 +291,7 @@ Include 5-20 major cities depending on state size.`
             content: `List major cities for: ${stateName}, ${countryName}`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.3,
         max_tokens: 2000
       });

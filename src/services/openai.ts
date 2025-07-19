@@ -119,6 +119,7 @@ Always include the flag emoji. Confidence should be 0-1 based on relevance to qu
             content: `Search for locations matching: "${query}"`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.3,
         max_tokens: 1000
       });
@@ -157,6 +158,11 @@ THINK STEP BY STEP and provide detailed, realistic analysis:
 5. Assess regional variations and local government issues
 6. Provide specific, actionable intelligence
 
+Return ONLY a valid JSON object with this exact structure:
+{
+  "country": "Country Name",
+  "displayName": "Display Name",
+  "governmentType": "Government Type",
   "legislativeBodies": ["Body 1", "Body 2"],
   "currentLeaders": {
     "head_of_state": "Specific name and title",
@@ -219,6 +225,7 @@ THINK STEP BY STEP and provide detailed, realistic analysis:
     }
   ]
 }
+}
 
 Make everything SPECIFIC and REALISTIC. Use actual political dynamics, real-sounding bill names, and genuine corruption patterns. Corruption risk should be 0-100 (higher = more risk).`
           },
@@ -241,6 +248,7 @@ DEEP RESEARCH REQUIRED:
 Provide SPECIFIC, DETAILED, and REALISTIC analysis with actual political intelligence.`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.4,
         max_tokens: 6000
       });
@@ -311,6 +319,7 @@ Focus on: unusual timing, beneficiaries, procedural irregularities, language pat
 ${billText}`
           }
         ],
+        response_format: { type: "json_object" },
         temperature: 0.3,
         max_tokens: 1500
       });
