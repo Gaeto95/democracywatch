@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Search, Shield, Eye, AlertTriangle, Users, Zap, Globe, TrendingUp } from 'lucide-react';
+import { Search, Shield, Eye, AlertTriangle, Users, Zap, Globe, TrendingUp, Brain, Target, Crosshair } from 'lucide-react';
 import LocationSearch from './LocationSearch';
 import FeatureCard from './FeatureCard';
 import StatsCounter from './StatsCounter';
@@ -9,6 +10,21 @@ import StatsCounter from './StatsCounter';
 const LandingPage = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
   const navigate = useNavigate();
+  
+  // Mouse tracking for interactive effects
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  
+  const rotateX = useTransform(mouseY, [-300, 300], [10, -10]);
+  const rotateY = useTransform(mouseX, [-300, 300], [-10, 10]);
+  
+  const handleMouseMove = (event: React.MouseEvent) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    mouseX.set(event.clientX - centerX);
+    mouseY.set(event.clientY - centerY);
+  };
 
   const handleLocationSelect = (location: string) => {
     setSelectedLocation(location);
@@ -57,8 +73,85 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+      <section className="relative overflow-hidden" onMouseMove={handleMouseMove}>
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-purple-600/20 to-red-600/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-tl from-green-600/20 via-transparent to-amber-600/20"></div>
+          
+          {/* Floating AI Agents */}
+          <motion.div
+            className="absolute top-20 left-20 w-4 h-4 bg-blue-400 rounded-full opacity-60"
+            animate={{
+              x: [0, 100, 0],
+              y: [0, -50, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-40 right-32 w-3 h-3 bg-purple-400 rounded-full opacity-70"
+            animate={{
+              x: [0, -80, 0],
+              y: [0, 60, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          <motion.div
+            className="absolute bottom-40 left-1/3 w-2 h-2 bg-green-400 rounded-full opacity-50"
+            animate={{
+              x: [0, 60, 0],
+              y: [0, -40, 0],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+          
+          {/* Neural Network Lines */}
+          <svg className="absolute inset-0 w-full h-full opacity-20">
+            <motion.line
+              x1="20%" y1="30%"
+              x2="80%" y2="70%"
+              stroke="url(#gradient1)"
+              strokeWidth="1"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+            />
+            <motion.line
+              x1="70%" y1="20%"
+              x2="30%" y2="80%"
+              stroke="url(#gradient2)"
+              strokeWidth="1"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", delay: 1 }}
+            />
+            <defs>
+              <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.2" />
+              </linearGradient>
+              <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#10B981" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.2" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -66,28 +159,107 @@ const LandingPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            {/* Interactive 3D Shield */}
             <motion.div
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mx-auto mb-8 w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center"
+              style={{ rotateX, rotateY }}
+              className="mx-auto mb-8 w-24 h-24 bg-gradient-to-br from-blue-500 via-purple-600 to-red-500 rounded-2xl flex items-center justify-center shadow-2xl border border-white/20 backdrop-blur-sm"
             >
-              <Shield className="h-10 w-10 text-white" />
+              <div className="relative">
+                <Shield className="h-12 w-12 text-white drop-shadow-lg" />
+                <motion.div
+                  className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+              </div>
             </motion.div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            {/* Dynamic Title with Multiple Gradients */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <motion.span 
+                className="bg-gradient-to-r from-blue-400 via-purple-400 to-red-400 bg-clip-text text-transparent"
+                animate={{
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+                style={{
+                  backgroundSize: '200% 200%'
+                }}
+              >
                 EXPOSE
-              </span>
+              </motion.span>
               <br />
-              <span className="text-white">YOUR GOVERNMENT</span>
+              <motion.span 
+                className="bg-gradient-to-r from-green-400 via-amber-400 to-purple-400 bg-clip-text text-transparent"
+                animate={{
+                  backgroundPosition: ['100% 50%', '0% 50%', '100% 50%'],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear",
+                  delay: 2.5
+                }}
+                style={{
+                  backgroundSize: '200% 200%'
+                }}
+              >
+                YOUR GOVERNMENT
+              </motion.span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              AI-powered real-time analysis of laws and corruption in 
-              <span className="text-blue-400 font-semibold"> 195 countries</span>. 
-              From federal to municipal - democracy transparency has never been this powerful.
+            {/* Enhanced Description with AI Agent Concept */}
+            <motion.p 
+              className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              <span className="text-blue-400 font-semibold">Multiple AI agents</span> working 24/7 to analyze corruption patterns in 
+              <span className="text-purple-400 font-semibold"> 195 countries</span>. 
+              <br />
+              <span className="text-green-400 font-semibold">Decentralized intelligence</span> that governments can't control or silence.
             </p>
+            
+            {/* AI Agents Visualization */}
+            <motion.div
+              className="flex justify-center space-x-8 mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2 }}
+            >
+              <motion.div
+                className="flex items-center space-x-2 bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0 }}
+              >
+                <Brain className="h-5 w-5 text-blue-400" />
+                <span className="text-blue-300 text-sm font-medium">Pattern Agent</span>
+              </motion.div>
+              <motion.div
+                className="flex items-center space-x-2 bg-purple-600/20 px-4 py-2 rounded-full border border-purple-400/30"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+              >
+                <Target className="h-5 w-5 text-purple-400" />
+                <span className="text-purple-300 text-sm font-medium">Investigation Agent</span>
+              </motion.div>
+              <motion.div
+                className="flex items-center space-x-2 bg-green-600/20 px-4 py-2 rounded-full border border-green-400/30"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 2 }}
+              >
+                <Crosshair className="h-5 w-5 text-green-400" />
+                <span className="text-green-300 text-sm font-medium">Tracking Agent</span>
+              </motion.div>
+            </motion.div>
 
             <LocationSearch onLocationSelect={handleLocationSelect} />
             
@@ -95,9 +267,9 @@ const LandingPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className="text-slate-400 mt-4 text-sm"
+              className="text-slate-400 mt-6 text-sm"
             >
-              Enter any country, state, or city to get instant government analysis
+              <span className="text-amber-400">⚡ Live AI agents</span> analyzing your government right now
             </motion.p>
           </motion.div>
         </div>
