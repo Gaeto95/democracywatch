@@ -105,7 +105,7 @@ const LandingPage = () => {
             {/* Dynamic Title with Multiple Gradients */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <motion.span 
-                className="bg-gradient-to-r from-white via-cyan-300 to-blue-300 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-yellow-300 via-orange-300 to-red-400 bg-clip-text text-transparent drop-shadow-2xl"
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                 }}
@@ -122,7 +122,7 @@ const LandingPage = () => {
               </motion.span>
               <br />
               <motion.span 
-                className="bg-gradient-to-r from-cyan-200 via-white to-blue-200 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-orange-200 via-yellow-200 to-orange-300 bg-clip-text text-transparent drop-shadow-2xl"
                 animate={{
                   backgroundPosition: ['100% 50%', '0% 50%', '100% 50%'],
                 }}
@@ -142,15 +142,15 @@ const LandingPage = () => {
             
             {/* Enhanced Description with AI Agent Concept */}
             <motion.p 
-              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-lg bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              <span className="text-cyan-300 font-semibold">Multiple AI agents</span> working 24/7 to analyze corruption patterns in 
+              <span className="text-yellow-300 font-semibold">Multiple AI agents</span> working 24/7 to analyze corruption patterns in 
               <span className="text-white font-semibold"> any location</span>. 
               <br />
-              <span className="text-blue-200 font-semibold">Decentralized intelligence</span> that governments can't control or silence.
+              <span className="text-orange-200 font-semibold">Decentralized intelligence</span> that governments can't control or silence.
             </motion.p>
             
             {/* AI Agents Visualization */}
@@ -161,27 +161,27 @@ const LandingPage = () => {
               transition={{ delay: 1.2 }}
             >
               <motion.div
-                className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full border border-cyan-300/40 backdrop-blur-sm"
+                className="flex items-center space-x-2 bg-black/30 px-4 py-2 rounded-full border border-yellow-400/60 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 0 }}
               >
-                <Brain className="h-5 w-5 text-cyan-300" />
+                <Brain className="h-5 w-5 text-yellow-300" />
                 <span className="text-white text-sm font-medium">Pattern Agent</span>
               </motion.div>
               <motion.div
-                className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full border border-blue-200/40 backdrop-blur-sm"
+                className="flex items-center space-x-2 bg-black/30 px-4 py-2 rounded-full border border-orange-400/60 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
               >
-                <Target className="h-5 w-5 text-blue-200" />
+                <Target className="h-5 w-5 text-orange-300" />
                 <span className="text-white text-sm font-medium">Investigation Agent</span>
               </motion.div>
               <motion.div
-                className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full border border-white/40 backdrop-blur-sm"
+                className="flex items-center space-x-2 bg-black/30 px-4 py-2 rounded-full border border-red-400/60 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 2 }}
               >
-                <Crosshair className="h-5 w-5 text-white" />
+                <Crosshair className="h-5 w-5 text-red-300" />
                 <span className="text-white text-sm font-medium">Tracking Agent</span>
               </motion.div>
             </motion.div>
@@ -192,16 +192,16 @@ const LandingPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className="text-blue-200 mt-6 text-sm"
+              className="text-white mt-6 text-sm bg-black/20 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10"
             >
-              <span className="text-cyan-300">⚡ Live AI agents</span> analyzing your government right now
+              <span className="text-yellow-300">⚡ Live AI agents</span> analyzing your government right now
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="relative z-10 py-16 bg-slate-800/50">
+      <section className="relative z-10 py-16 bg-black/40 backdrop-blur-md border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -216,7 +216,7 @@ const LandingPage = () => {
               What Democracy Watch can analyze today
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -224,7 +224,7 @@ const LandingPage = () => {
               className="text-center group"
             >
               <div className="text-3xl md:text-4xl font-bold text-cyan-300 mb-2 group-hover:scale-110 transition-transform duration-300">
-                Any
+                <span className="text-yellow-300">Any</span>
               </div>
               <div className="text-blue-100 text-sm font-medium">Country Analysis</div>
             </motion.div>
@@ -237,7 +237,7 @@ const LandingPage = () => {
               className="text-center group"
             >
               <div className="text-3xl md:text-4xl font-bold text-blue-200 mb-2 group-hover:scale-110 transition-transform duration-300">
-                Multi-Level
+                <span className="text-orange-300">Multi-Level</span>
               </div>
               <div className="text-blue-100 text-sm font-medium">Government Coverage</div>
             </motion.div>
@@ -250,7 +250,7 @@ const LandingPage = () => {
               className="text-center group"
             >
               <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                Deep
+                <span className="text-red-300">Deep</span>
               </div>
               <div className="text-blue-100 text-sm font-medium">AI Investigation</div>
             </motion.div>
@@ -263,7 +263,7 @@ const LandingPage = () => {
               className="text-center group"
             >
               <div className="text-3xl md:text-4xl font-bold text-cyan-200 mb-2 group-hover:scale-110 transition-transform duration-300">
-                Open
+                <span className="text-yellow-200">Open</span>
               </div>
               <div className="text-blue-100 text-sm font-medium">Source Platform</div>
             </motion.div>
@@ -272,7 +272,7 @@ const LandingPage = () => {
       </section>
 
       {/* Global Hotspots */}
-      <section className="relative z-10 py-16">
+      <section className="relative z-10 py-16 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -297,10 +297,10 @@ const LandingPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleLocationSelect(hotspot.country.split(' ')[1])}
-                className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/20 hover:border-cyan-300/50 transition-all duration-200 group text-left"
+                className="p-6 bg-black/40 backdrop-blur-sm rounded-xl border border-orange-400/30 hover:border-yellow-400/70 transition-all duration-200 group text-left"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-yellow-300 transition-colors">
                     {hotspot.country}
                   </h3>
                   <TrendingUp className={`h-5 w-5 ${
@@ -309,7 +309,7 @@ const LandingPage = () => {
                   }`} />
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-blue-200">Corruption Risk</span>
+                  <span className="text-orange-200">Corruption Risk</span>
                   <span className={`text-2xl font-bold ${
                     hotspot.risk > 70 ? 'text-red-400' :
                     hotspot.risk > 50 ? 'text-amber-400' : 'text-green-400'
@@ -324,7 +324,7 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative z-10 py-24">
+      <section className="relative z-10 py-24 bg-black/30 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -334,9 +334,9 @@ const LandingPage = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Democracy Intelligence
-              <span className="block text-cyan-300">For Every Level</span>
+              <span className="block text-yellow-300">For Every Level</span>
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               Our AI understands every government structure on Earth and provides 
               instant analysis from federal legislation to city council meetings.
             </p>
@@ -351,7 +351,7 @@ const LandingPage = () => {
       </section>
 
       {/* Global Impact Section */}
-      <section className="relative z-10 py-24 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+      <section className="relative z-10 py-24 bg-black/50 backdrop-blur-md border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -369,11 +369,11 @@ const LandingPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700"
+                className="bg-black/60 rounded-2xl p-8 border border-orange-400/30 backdrop-blur-sm"
               >
                 <div className="text-3xl mb-4">🇺🇸</div>
                 <h3 className="text-xl font-bold text-white mb-3">Multi-Agent Vision</h3>
-                <p className="text-blue-100">
+                <p className="text-orange-100">
                   Multiple AI agents could work together to detect corruption patterns 
                   that single systems might miss.
                 </p>
@@ -384,11 +384,11 @@ const LandingPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700"
+                className="bg-black/60 rounded-2xl p-8 border border-yellow-400/30 backdrop-blur-sm"
               >
                 <div className="text-3xl mb-4">🇧🇷</div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Network</h3>
-                <p className="text-blue-100">
+                <p className="text-yellow-100">
                   A decentralized network could monitor governments worldwide, 
                   resistant to interference or shutdown.
                 </p>
@@ -399,11 +399,11 @@ const LandingPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700"
+                className="bg-black/60 rounded-2xl p-8 border border-red-400/30 backdrop-blur-sm"
               >
                 <div className="text-3xl mb-4">🏛️</div>
                 <h3 className="text-xl font-bold text-white mb-3">Behavioral Change</h3>
-                <p className="text-blue-100">
+                <p className="text-red-100">
                   When governments know they're being watched by incorruptible AI, 
                   they might start thinking differently.
                 </p>
@@ -414,7 +414,7 @@ const LandingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 py-24">
+      <section className="relative z-10 py-24 bg-black/40 backdrop-blur-md">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -423,9 +423,9 @@ const LandingPage = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Explore
-              <span className="block text-cyan-300">AI-Powered Transparency?</span>
+              <span className="block text-yellow-300">AI-Powered Transparency?</span>
             </h2>
-            <p className="text-xl text-blue-100 mb-12">
+            <p className="text-xl text-white mb-12 bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               Explore how AI could help citizens understand and monitor their governments.
             </p>
             
@@ -433,7 +433,7 @@ const LandingPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.querySelector('#location-search')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-cyan-400/25 transition-all duration-300 flex items-center space-x-3 mx-auto"
+              className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-12 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-orange-400/25 transition-all duration-300 flex items-center space-x-3 mx-auto"
             >
               <Zap className="h-5 w-5" />
               <span>Try AI Analysis Now</span>
