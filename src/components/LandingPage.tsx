@@ -90,12 +90,12 @@ const LandingPage = () => {
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               style={{ rotateX, rotateY }}
-              className="mx-auto mb-8 w-24 h-24 bg-gradient-to-br from-blue-500 via-purple-600 to-red-500 rounded-2xl flex items-center justify-center shadow-2xl border border-white/20 backdrop-blur-sm"
+              className="mx-auto mb-8 w-24 h-24 bg-gradient-to-br from-blue-400 via-cyan-400 to-white rounded-2xl flex items-center justify-center shadow-2xl border border-white/30 backdrop-blur-sm"
             >
               <div className="relative">
-                <Shield className="h-12 w-12 text-white drop-shadow-lg" />
+                <Shield className="h-12 w-12 text-blue-900 drop-shadow-lg" />
                 <motion.div
-                  className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"
+                  className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-300 rounded-full"
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
@@ -105,7 +105,7 @@ const LandingPage = () => {
             {/* Dynamic Title with Multiple Gradients */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <motion.span 
-                className="bg-gradient-to-r from-blue-400 via-purple-400 to-red-400 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-white via-cyan-300 to-blue-300 bg-clip-text text-transparent"
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                 }}
@@ -122,7 +122,7 @@ const LandingPage = () => {
               </motion.span>
               <br />
               <motion.span 
-                className="bg-gradient-to-r from-green-400 via-amber-400 to-purple-400 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-cyan-200 via-white to-blue-200 bg-clip-text text-transparent"
                 animate={{
                   backgroundPosition: ['100% 50%', '0% 50%', '100% 50%'],
                 }}
@@ -142,15 +142,15 @@ const LandingPage = () => {
             
             {/* Enhanced Description with AI Agent Concept */}
             <motion.p 
-              className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              <span className="text-blue-400 font-semibold">Multiple AI agents</span> working 24/7 to analyze corruption patterns in 
-              <span className="text-purple-400 font-semibold"> 195 countries</span>. 
+              <span className="text-cyan-300 font-semibold">Multiple AI agents</span> working 24/7 to analyze corruption patterns in 
+              <span className="text-white font-semibold"> any location</span>. 
               <br />
-              <span className="text-green-400 font-semibold">Decentralized intelligence</span> that governments can't control or silence.
+              <span className="text-blue-200 font-semibold">Decentralized intelligence</span> that governments can't control or silence.
             </motion.p>
             
             {/* AI Agents Visualization */}
@@ -161,28 +161,28 @@ const LandingPage = () => {
               transition={{ delay: 1.2 }}
             >
               <motion.div
-                className="flex items-center space-x-2 bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30"
+                className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full border border-cyan-300/40 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 0 }}
               >
-                <Brain className="h-5 w-5 text-blue-400" />
-                <span className="text-blue-300 text-sm font-medium">Pattern Agent</span>
+                <Brain className="h-5 w-5 text-cyan-300" />
+                <span className="text-white text-sm font-medium">Pattern Agent</span>
               </motion.div>
               <motion.div
-                className="flex items-center space-x-2 bg-purple-600/20 px-4 py-2 rounded-full border border-purple-400/30"
+                className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full border border-blue-200/40 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
               >
-                <Target className="h-5 w-5 text-purple-400" />
-                <span className="text-purple-300 text-sm font-medium">Investigation Agent</span>
+                <Target className="h-5 w-5 text-blue-200" />
+                <span className="text-white text-sm font-medium">Investigation Agent</span>
               </motion.div>
               <motion.div
-                className="flex items-center space-x-2 bg-green-600/20 px-4 py-2 rounded-full border border-green-400/30"
+                className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full border border-white/40 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 2 }}
               >
-                <Crosshair className="h-5 w-5 text-green-400" />
-                <span className="text-green-300 text-sm font-medium">Tracking Agent</span>
+                <Crosshair className="h-5 w-5 text-white" />
+                <span className="text-white text-sm font-medium">Tracking Agent</span>
               </motion.div>
             </motion.div>
 
@@ -192,9 +192,9 @@ const LandingPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className="text-slate-400 mt-6 text-sm"
+              className="text-blue-200 mt-6 text-sm"
             >
-              <span className="text-amber-400">⚡ Live AI agents</span> analyzing your government right now
+              <span className="text-cyan-300">⚡ Live AI agents</span> analyzing your government right now
             </motion.p>
           </motion.div>
         </div>
@@ -212,7 +212,7 @@ const LandingPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Current Capabilities
             </h2>
-            <p className="text-xl text-slate-300">
+            <p className="text-xl text-blue-100">
               What Democracy Watch can analyze today
             </p>
           </motion.div>
@@ -223,10 +223,10 @@ const LandingPage = () => {
               viewport={{ once: true }}
               className="text-center group"
             >
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-cyan-300 mb-2 group-hover:scale-110 transition-transform duration-300">
                 Any
               </div>
-              <div className="text-slate-300 text-sm font-medium">Country Analysis</div>
+              <div className="text-blue-100 text-sm font-medium">Country Analysis</div>
             </motion.div>
             
             <motion.div
@@ -236,10 +236,10 @@ const LandingPage = () => {
               transition={{ delay: 0.1 }}
               className="text-center group"
             >
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-blue-200 mb-2 group-hover:scale-110 transition-transform duration-300">
                 Multi-Level
               </div>
-              <div className="text-slate-300 text-sm font-medium">Government Coverage</div>
+              <div className="text-blue-100 text-sm font-medium">Government Coverage</div>
             </motion.div>
             
             <motion.div
@@ -249,10 +249,10 @@ const LandingPage = () => {
               transition={{ delay: 0.2 }}
               className="text-center group"
             >
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
                 Deep
               </div>
-              <div className="text-slate-300 text-sm font-medium">AI Investigation</div>
+              <div className="text-blue-100 text-sm font-medium">AI Investigation</div>
             </motion.div>
             
             <motion.div
@@ -262,10 +262,10 @@ const LandingPage = () => {
               transition={{ delay: 0.3 }}
               className="text-center group"
             >
-              <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-cyan-200 mb-2 group-hover:scale-110 transition-transform duration-300">
                 Open
               </div>
-              <div className="text-slate-300 text-sm font-medium">Source Platform</div>
+              <div className="text-blue-100 text-sm font-medium">Source Platform</div>
             </motion.div>
           </div>
         </div>
@@ -283,7 +283,7 @@ const LandingPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Example Analysis Targets
             </h2>
-            <p className="text-xl text-slate-300">
+            <p className="text-xl text-blue-100">
               Countries where transparency analysis could be valuable
             </p>
           </motion.div>
@@ -297,10 +297,10 @@ const LandingPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleLocationSelect(hotspot.country.split(' ')[1])}
-                className="p-6 bg-slate-800/60 rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-200 group text-left"
+                className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/20 hover:border-cyan-300/50 transition-all duration-200 group text-left"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
                     {hotspot.country}
                   </h3>
                   <TrendingUp className={`h-5 w-5 ${
@@ -309,7 +309,7 @@ const LandingPage = () => {
                   }`} />
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Corruption Risk</span>
+                  <span className="text-blue-200">Corruption Risk</span>
                   <span className={`text-2xl font-bold ${
                     hotspot.risk > 70 ? 'text-red-400' :
                     hotspot.risk > 50 ? 'text-amber-400' : 'text-green-400'
@@ -334,9 +334,9 @@ const LandingPage = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Democracy Intelligence
-              <span className="block text-blue-400">For Every Level</span>
+              <span className="block text-cyan-300">For Every Level</span>
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Our AI understands every government structure on Earth and provides 
               instant analysis from federal legislation to city council meetings.
             </p>
@@ -373,7 +373,7 @@ const LandingPage = () => {
               >
                 <div className="text-3xl mb-4">🇺🇸</div>
                 <h3 className="text-xl font-bold text-white mb-3">Multi-Agent Vision</h3>
-                <p className="text-slate-300">
+                <p className="text-blue-100">
                   Multiple AI agents could work together to detect corruption patterns 
                   that single systems might miss.
                 </p>
@@ -388,7 +388,7 @@ const LandingPage = () => {
               >
                 <div className="text-3xl mb-4">🇧🇷</div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Network</h3>
-                <p className="text-slate-300">
+                <p className="text-blue-100">
                   A decentralized network could monitor governments worldwide, 
                   resistant to interference or shutdown.
                 </p>
@@ -403,7 +403,7 @@ const LandingPage = () => {
               >
                 <div className="text-3xl mb-4">🏛️</div>
                 <h3 className="text-xl font-bold text-white mb-3">Behavioral Change</h3>
-                <p className="text-slate-300">
+                <p className="text-blue-100">
                   When governments know they're being watched by incorruptible AI, 
                   they might start thinking differently.
                 </p>
@@ -423,9 +423,9 @@ const LandingPage = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Explore
-              <span className="block text-blue-400">AI-Powered Transparency?</span>
+              <span className="block text-cyan-300">AI-Powered Transparency?</span>
             </h2>
-            <p className="text-xl text-slate-300 mb-12">
+            <p className="text-xl text-blue-100 mb-12">
               Explore how AI could help citizens understand and monitor their governments.
             </p>
             
@@ -433,7 +433,7 @@ const LandingPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.querySelector('#location-search')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center space-x-3 mx-auto"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-cyan-400/25 transition-all duration-300 flex items-center space-x-3 mx-auto"
             >
               <Zap className="h-5 w-5" />
               <span>Try AI Analysis Now</span>
