@@ -102,14 +102,6 @@ ${previousContext ? `Previous context: ${previousContext}` : ''}
 RESEARCH REQUIREMENTS:
 1. Current political dynamics and recent developments
 2. Key players and their motivations
-3. Financial interests and lobbying influences
-4. Potential corruption or transparency issues
-5. Citizen impact and democratic implications
-6. Specific, actionable findings
-
-GENERATE REALISTIC SOURCES including:
-- News articles from major outlets (CNN, Reuters, AP, local news)
-- Official government documents (.gov websites)
 - Academic research and think tank analysis
 - Financial disclosure and lobbying databases
 - Social media posts from officials
