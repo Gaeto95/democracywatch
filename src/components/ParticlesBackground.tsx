@@ -42,7 +42,7 @@ const ParticlesBackground: React.FC = () => {
             },
             repulse: {
               distance: 80,
-              duration: 1.2,
+              duration: 3.0,
             },
             grab: {
               distance: 255.80432187492372,
@@ -53,7 +53,7 @@ const ParticlesBackground: React.FC = () => {
             bubble: {
               distance: 267.9854800594439,
               size: 40,
-              duration: 2,
+              duration: 3.0,
               opacity: 0.6740240862101164,
               speed: 3
             }
