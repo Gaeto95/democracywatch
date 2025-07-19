@@ -5,6 +5,7 @@ import { Search, Shield, Eye, AlertTriangle, Users, Zap, Globe, TrendingUp, Brai
 import LocationSearch from './LocationSearch';
 import FeatureCard from './FeatureCard';
 import StatsCounter from './StatsCounter';
+import ParticlesBackground from './ParticlesBackground';
 
 const LandingPage = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -73,83 +74,8 @@ const LandingPage = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden" onMouseMove={handleMouseMove}>
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-purple-600/20 to-red-600/30"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-green-600/20 via-transparent to-amber-600/20"></div>
-          
-          {/* Floating AI Agents */}
-          <motion.div
-            className="absolute top-20 left-20 w-4 h-4 bg-blue-400 rounded-full opacity-60"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -50, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          <motion.div
-            className="absolute top-40 right-32 w-3 h-3 bg-purple-400 rounded-full opacity-70"
-            animate={{
-              x: [0, -80, 0],
-              y: [0, 60, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1
-            }}
-          />
-          <motion.div
-            className="absolute bottom-40 left-1/3 w-2 h-2 bg-green-400 rounded-full opacity-50"
-            animate={{
-              x: [0, 60, 0],
-              y: [0, -40, 0],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2
-            }}
-          />
-          
-          {/* Neural Network Lines */}
-          <svg className="absolute inset-0 w-full h-full opacity-20">
-            <motion.line
-              x1="20%" y1="30%"
-              x2="80%" y2="70%"
-              stroke="url(#gradient1)"
-              strokeWidth="1"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-            />
-            <motion.line
-              x1="70%" y1="20%"
-              x2="30%" y2="80%"
-              stroke="url(#gradient2)"
-              strokeWidth="1"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", delay: 1 }}
-            />
-            <defs>
-              <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.2" />
-              </linearGradient>
-              <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#10B981" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.2" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+        {/* Particles.js Background */}
+        <ParticlesBackground />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
