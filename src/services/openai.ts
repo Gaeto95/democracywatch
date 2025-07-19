@@ -297,7 +297,7 @@ Provide SPECIFIC, DETAILED, and REALISTIC analysis with actual political intelli
         messages: [
           {
             role: "system",
-            content: \`You are a legislative analysis expert specializing in corruption detection. Analyze bills for potential corruption, conflicts of interest, and democratic concerns.
+            content: `You are a legislative analysis expert specializing in corruption detection. Analyze bills for potential corruption, conflicts of interest, and democratic concerns.
 
 Return JSON with this structure:
 {
@@ -312,7 +312,7 @@ Focus on: unusual timing, beneficiaries, procedural irregularities, language pat
           },
           {
             role: "user",
-            content: \`Analyze this ${country} legislation for corruption risks and democratic concerns:
+            content: `Analyze this ${country} legislation for corruption risks and democratic concerns:
 
 ${billText}`
           }
