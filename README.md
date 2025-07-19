@@ -10,7 +10,7 @@ Watchdog is a **working prototype** exploring that possibility. Currently a soph
 
 ## 🌟 Live Demo
 
-**🔗 [https://stunning-kashata-8a87f0.netlify.app](https://stunning-kashata-8a87f0.netlify.app)**
+**🔗 [https://watchdogg.netlify.app](https://watchdogg.netlify.app)**
 
 ## 🎯 Mission
 
@@ -463,7 +463,7 @@ Multiple AI agents, working 24/7, trained specifically to expose what government
 
 ## 📞 Contact & Support
 
-- **Website**: [https://stunning-kashata-8a87f0.netlify.app](https://stunning-kashata-8a87f0.netlify.app)
+- **Website**: [https://watchdogg.netlify.app](https://watchdogg.netlify.app)
 - **Issues**: [GitHub Issues](https://github.com/your-username/democracy-watch/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/your-username/democracy-watch/discussions)
 
