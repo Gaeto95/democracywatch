@@ -153,7 +153,7 @@ As more citizens would use such a system:
 ## 🌐 Data Integration Roadmap
 
 ### **Current Challenge: Global Government Data**
-Unlike the US (which has Congress.gov, OpenSecrets.org), most countries lack comprehensive government APIs. This creates both a challenge and an opportunity for Democracy Watch.
+Unlike the US (which has Congress.gov, OpenSecrets.org), most countries lack comprehensive government APIs. This creates both a challenge and an opportunity for Watchdog.
 
 ### **Phase 1: Multi-Source Data Integration**
 
@@ -232,7 +232,7 @@ Unlike the US (which has Congress.gov, OpenSecrets.org), most countries lack com
                     └──────────────┬──────────────┘
                                    │
                     ┌──────────────▼──────────────┐
-                    │    Democracy Watch UI       │
+                    │    Watch Dog UI            │
                     │ • Real-time dashboards     │
                     │ • Investigation tools      │
                     │ • Citizen alerts           │
@@ -375,13 +375,13 @@ The vision is to create the world's first **comprehensive, AI-powered, globally-
 ### **Why This Could Change Everything**
 
 **Traditional Approach**: Citizens rely on journalists and activists to expose corruption  
-**Democracy Watch Vision**: AI agents would work 24/7, never sleep, never get threatened, never get bought
+**WatchDog Vision**: AI agents would work 24/7, never sleep, never get threatened, never get bought
 
 **Traditional Approach**: Governments control information flow and timing  
-**Democracy Watch Vision**: Decentralized network that governments couldn't shut down or influence
+**WatchDog Vision**: Decentralized network that governments couldn't shut down or influence
 
 **Traditional Approach**: Corruption is exposed after damage is done  
-**Democracy Watch Vision**: Predictive detection could prevent corruption before it happens
+**WatchDog Vision**: Predictive detection could prevent corruption before it happens
 
 ### **The Potential Psychological Impact on Government**
 When officials would know that:
@@ -482,8 +482,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Transparency could be automatic, not something we have to fight for
 - Democracy could be strengthened by permanent accountability
 
-**This could be the future. This is the Democracy Watch vision.**
-**This could be the future. This is the Watchdog vision.**
+**This could be the future. This is the WatchDog vision.**
 
 Multiple AI agents, working 24/7, trained specifically to expose what governments try to hide. A decentralized network that no single entity could control, influence, or shut down.
 
